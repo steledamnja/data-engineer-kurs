@@ -59,7 +59,7 @@ SELECT
 FROM fact_player_match f
 JOIN dim_player p ON f.player_id = p.player_id
 JOIN dim_date d ON f.date_key = d.date_key
-WHERE d.season = '2024/25'
+WHERE d.season = '2024/25' AND f.rating IS NOT NULL AND NOT ISNAN(f.rating)
 GROUP BY p.position
 ORDER BY p.position;
 

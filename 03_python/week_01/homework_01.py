@@ -39,3 +39,18 @@ for number in numbers:
         count += 1
 
 print(count)
+
+# 5. Napisati program koji racuna sume elemenata liste celih brojeva koji su deljivi sa 2 odnosno sa 3.
+
+numbers = [1, 3, 5, 6, 7, 8, 9, 10, 12]
+divisible_by_2 = []
+divisible_by_3 = []
+
+for number in numbers:
+    if number % 2 == 0:
+        divisible_by_2.append(number)
+    if number % 3 == 0:
+        divisible_by_3.append(number)
+
+print(sum(divisible_by_2))
+print(sum(divisible_by_3))
